@@ -1,4 +1,5 @@
 # Generate Swagger Step
+
 1. Run `go install github.com/swaggo/swag/cmd/swag@latest`
 2. Run `swag init` then you'll see directory `docs`
 3. Run `go get -u github.com/swaggo/echo-swagger`
