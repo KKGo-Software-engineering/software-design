@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"kbtg-bootcamp-petstore/petstore"
 
 	"github.com/labstack/echo/v4"
@@ -13,8 +12,7 @@ type serverWrapper struct {
 
 // (POST /pet)
 func (w *serverWrapper) AddPet(ctx echo.Context) error {
-	fmt.Println("do something here")
-	return nil
+	return ctx.String(200, "Added")
 }
 
 // Update an existing pet
