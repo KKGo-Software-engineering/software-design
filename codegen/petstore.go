@@ -6,16 +6,20 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-type serverWrapper struct {
+type ServerWrapper struct {
 	Handler petstore.ServerInterface
 }
 
+func NewServerWrapper() *ServerWrapper {
+	return &ServerWrapper{}
+}
+
 // (PUT /pet)
-func (w *serverWrapper) UpdatePet(ctx echo.Context) error {
+func (w *ServerWrapper) UpdatePet(ctx echo.Context) error {
 	return ctx.String(200, "Updated")
 }
 
 // (POST /pet)
-func (w *serverWrapper) AddPet(ctx echo.Context) error {
+func (w *ServerWrapper) AddPet(ctx echo.Context) error {
 	return ctx.String(200, "Added")
 }

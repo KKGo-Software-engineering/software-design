@@ -7,8 +7,9 @@ import (
 
 func main() {
 	e := echo.New()
-	myAPI := serverWrapper{}
-	e.POST("/pet", myAPI.AddPet)
-	petstore.RegisterHandlers(e, &myAPI)
+	api := NewServerWrapper()
+	e.POST("/pet", api.AddPet)
+	e.PUT("/pet", api.UpdatePet)
+	petstore.RegisterHandlers(e, api)
 	e.Logger.Fatal(e.Start(":1323"))
 }
