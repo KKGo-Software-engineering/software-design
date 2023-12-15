@@ -5,8 +5,11 @@
 2. Run `go install github.com/deepmap/oapi-codegen/v2/cmd/oapi-codegen@latest`
    - Read more: https://github.com/deepmap/oapi-codegen/tree/master/examples/petstore-expanded
 3. Make directory `mkdir petstore` run `oapi-codegen -package petstore openapi.yaml > petstore/petstore.gen.go`
-4. Create `petstore.go` file and add the following code:
+4. Create `petstore.go` file and add the [following code](#petstorego)
+5. Update `main.go` file to the [following code](#maingo)
+6. Try to add edit `openapi.yaml` file and then generate again
 
+### petstore.go
 ```go
 package main
 
@@ -36,16 +39,12 @@ func (w *ServerWrapper) AddPet(ctx echo.Context) error {
 
 ```
 
-5. Update `main.go` file to the following code:
-
+### main.go
 ```go
 api := NewServerWrapper()
-e.POST("/pet", api.AddPet)
-e.PUT("/pet", api.UpdatePet)
 petstore.RegisterHandlers(e, api)
 ```
 
 ## Plugins
-
 - VS Code: OpenAPI (Swagger) Editor
 - GoLand: OpenAPI Specification by Jetbrains
