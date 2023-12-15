@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	_ "kbtg-boocamp-cache/docs"
+	_ "kbtg-boocamp-swagger/docs"
 
 	"github.com/labstack/echo/v4"
 	echoSwagger "github.com/swaggo/echo-swagger"

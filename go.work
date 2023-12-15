@@ -6,4 +6,5 @@ use (
 	./codegen
 	./kafka
 	./messaging-queue
+	./swagger
 )
