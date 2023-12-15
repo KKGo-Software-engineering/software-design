@@ -4,5 +4,5 @@ install:
 create-petstore:
 	mkdir petstore
 
-generate: create-petstore
+generate:
 	oapi-codegen -package petstore openapi.yaml > petstore/petstore.gen.go
