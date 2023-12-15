@@ -1,0 +1,27 @@
+@startuml Login
+
+title Login Process
+
+actor User
+participant Login
+participant Database
+
+User->>Login: Visits login page
+activate Login
+Login->>User: Display Login form for enter username and password
+User->>Login: Enters username and password
+Login->>Database: Validates username and password
+deactivate Login
+alt Correct credentials
+    Database->>Login: Login successful
+    activate Login
+    Login->>User: Displays welcome message and grants access
+    deactivate Login
+else Incorrect credentials
+    Database->>Login: Login failed
+    activate Login
+    Login->>User: Displays error message
+    deactivate Login
+end
+
+@enduml
