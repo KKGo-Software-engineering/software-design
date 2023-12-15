@@ -1,9 +1,8 @@
 package main
 
 import (
-	"kbtg-bootcamp-petstore/petstore"
-
 	"github.com/labstack/echo/v4"
+	"kbtg-bootcamp-petstore/petstore"
 )
 
 func main() {
