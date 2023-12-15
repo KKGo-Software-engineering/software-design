@@ -1,10 +1,11 @@
 # Code generation
 
 ## Instructions
-
-1. Run `go install github.com/deepmap/oapi-codegen/v2/cmd/oapi-codegen@latest`
-2. Make directory `mkdir petstore` run `oapi-codegen -package petstore openapi.yaml > petstore/petstore.gen.go`
-3. Create `petstore.go` file and add the following code:
+1. https://editor.swagger.io/
+2. Run `go install github.com/deepmap/oapi-codegen/v2/cmd/oapi-codegen@latest`
+   - Read more: https://github.com/deepmap/oapi-codegen/tree/master/examples/petstore-expanded
+3. Make directory `mkdir petstore` run `oapi-codegen -package petstore openapi.yaml > petstore/petstore.gen.go`
+4. Create `petstore.go` file and add the following code:
 
 ```go
 package main
@@ -35,7 +36,7 @@ func (w *ServerWrapper) AddPet(ctx echo.Context) error {
 
 ```
 
-4. Update `main.go` file to the following code:
+5. Update `main.go` file to the following code:
 
 ```go
 api := NewServerWrapper()
