@@ -1,4 +1,4 @@
-package main
+package pet
 
 import (
 	"kbtg-bootcamp-petstore/petstore"
