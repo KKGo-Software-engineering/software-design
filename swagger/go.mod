@@ -5,7 +5,6 @@ go 1.21.1
 require (
 	github.com/labstack/echo/v4 v4.11.3
 	github.com/swaggo/echo-swagger v1.4.1
-	github.com/swaggo/swag v1.16.2
 )
 
 require (
@@ -22,6 +21,7 @@ require (
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/rogpeppe/go-internal v1.12.0 // indirect
 	github.com/swaggo/files/v2 v2.0.0 // indirect
+	github.com/swaggo/swag v1.16.2 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	golang.org/x/crypto v0.16.0 // indirect
