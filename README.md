@@ -1,5 +1,8 @@
 # Software Design and Architecture
 
+## Pre-requisites
+- Go
+
 ## Plugins
 
 - PlantUML
