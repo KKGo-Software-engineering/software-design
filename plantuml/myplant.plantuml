@@ -1,0 +1,24 @@
+@startuml car emgine 
+
+class Car {
+    - make: String 
+    - model: String 
+    + start()
+    + stop()
+}
+
+class Engine {
+    + start()
+    + stop()
+}
+
+
+Car <- Engine
+
+class Flybie {
+    + Fly()
+}
+
+car <- Flybie
+
+@enduml

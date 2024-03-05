@@ -22,7 +22,7 @@ func main() {
 	cacheManager := cachelib.New[[]byte](redisStore)
 
 	e := echo.New()
-	counter := 1
+	counter := 1 // assume this is a counter from database or expensive operation
 	e.GET("/counts", func(c echo.Context) error {
 		ctx := c.Request().Context()
 		// try to get counter first
